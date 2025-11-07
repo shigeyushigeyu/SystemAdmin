@@ -1,0 +1,122 @@
+<section class="relative min-h-screen overflow-hidden flex items-center justify-center">
+
+  <video
+    src="/videos/android.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+    class="absolute inset-0 z-0 w-full h-full object-cover opacity-70"
+  ></video>
+
+  <div class="absolute inset-0 z-10 bg-black/50"></div>
+
+  <div class="relative z-20 w-full px-4 text-center">
+    <h1 
+      id="loopText" 
+      class="text-6xl sm:text-7xl md:text-8xl font-black text-white/90 tracking-wider drop-shadow-lg transition-opacity" 
+      data-duration="700"
+    >
+      おかえりなさい
+    </h1>
+    <p class="mt-4 text-xl sm:text-2xl text-white/90 font-medium">
+      Give me your orders....<br> start a new project....
+    </p>
+  </div>
+</section>
+
+<script>
+  // 表示するテキストの配列
+  const lines = [
+    "おかえりなさい",
+    "System Admin",
+    "あなたが",
+    "システム管理者です"
+  ];
+  
+  let index = 0;
+  const el = document.getElementById("loopText");
+  
+  // HTMLのdata-duration属性からフェード時間を取得（CSSと同期）
+  const fadeDuration = parseInt(el.getAttribute('data-duration')) || 700;
+  const displayTime = 2500; // テキストが表示されている時間 (フェード時間を含まない)
+  
+  // **初期設定**
+  // CSSで設定されたトランジション時間をJavaScriptでも使用
+  el.style.transitionDuration = `${fadeDuration}ms`;
+  
+  /**
+   * テキストをフェードアウト・変更・フェードインさせる関数
+   */
+  function fadeText() {
+    // 1. フェードアウト
+    el.style.opacity = 0;
+
+    // 2. フェードアウト完了後（transitionDuration後）にテキストを変更し、フェードイン
+    // **transitionendイベント** を使うことで、CSSアニメーションの完了を正確に待ちます
+    const transitionHandler = () => {
+      // イベントリスナーをすぐに削除 (一度きりの実行のため)
+      el.removeEventListener('transitionend', transitionHandler);
+      
+      // インデックスを更新
+      index = (index + 1) % lines.length;
+      
+      // テキストを更新
+      el.textContent = lines[index];
+      
+      // 3. フェードイン
+      // (トランジションを効かせたまま opacity を 1 に戻す)
+      requestAnimationFrame(() => {
+          el.style.opacity = 1;
+      });
+    };
+
+    // transitionendイベントでテキストの切り替え処理を実行
+    el.addEventListener('transitionend', transitionHandler, { once: true });
+  }
+  
+  // 初回表示（displayTime）後にアニメーションを開始
+  setTimeout(() => {
+    // 初回実行
+    fadeText();
+    
+    // 以降は「表示時間 + フェードアウト時間 + フェードイン時間」の合計時間でループ
+    // transitionendを使うことで、setIntervalは「次のテキストが表示され始めるタイミング」に設定すればOK
+    // ただし、今回はフェードイン完了から次のフェードアウト開始までの間隔を一定にするため、
+    // **表示時間 + フェードアウト時間** をループ間隔とします
+    // フェードイン完了後、displayTimeだけ表示して、次のフェードアウトを開始する、というロジック。
+
+    // ループ間隔: 表示時間 (2500ms) + フェードアウト時間 (700ms)
+    // 合計: 3200ms
+    setInterval(fadeText, displayTime + fadeDuration);
+
+  }, displayTime);
+</script>
+
+<style>
+  .typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid rgba(255,255,255,0.7);
+    animation: typing 2s steps(20), blink 0.7s step-end infinite;
+  }
+
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+
+#loopText {
+  text-shadow:
+    0 0 10px rgba(0, 255, 200, 0.7),
+    0 0 20px rgba(0, 255, 200, 0.5);
+}
+</style>
+
+

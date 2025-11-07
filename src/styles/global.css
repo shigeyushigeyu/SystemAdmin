@@ -1,0 +1,24 @@
+/*src/styles/global.css*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: url("/images/background.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000; /* 読み込み中のバックアップ色 */
+  /* color: #fff; ← 削除 */
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
