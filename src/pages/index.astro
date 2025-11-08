@@ -8,18 +8,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 <html lang="ja">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "システムアドミン株式会社",
-  "url": "https://systemadmin.co.jp/",
-  "logo": "https://systemadmin.co.jp/systemadmin.png",
-  "sameAs": [
-    "https://twitter.com/systemadmi_n"
-  ]
-}
-</script>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,12 +34,23 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" href="/favicon-512x512.png" sizes="512x512" type="image/png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="canonical" href="https://systemadmin.co.jp/">
-  </head>
-
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "システムアドミン株式会社",
+      "url": "https://systemadmin.co.jp/",
+      "logo": "https://systemadmin.co.jp/systemadmin.png",
+      "sameAs": [
+        "https://twitter.com/systemadmi_n"
+      ]
+    }
+      </head>
+    </script>
   <body class="font-sans text-gray-800 bg-gray-50">
-　<Header />
-	<Hero />
-  <Main />
-  <Footer />
+  　<Header />
+    <Hero />
+    <Main />
+    <Footer />
   </body>
 </html>

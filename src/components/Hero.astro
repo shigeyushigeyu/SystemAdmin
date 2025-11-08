@@ -14,14 +14,12 @@
   <div class="relative z-20 w-full px-4 text-center">
     <h1 
       id="loopText" 
-      class="text-6xl sm:text-7xl md:text-8xl font-black text-white/90 tracking-wider drop-shadow-lg transition-opacity" 
+      class="text-6xl sm:text-7xl md:text-8xl font-black text-white/90 tracking-wider drop-shadow-lg transition-opacity whitespace-nowrap overflow-x-auto"
       data-duration="700"
     >
       おかえりなさい
     </h1>
-    <p class="mt-4 text-xl sm:text-2xl text-white/90 font-medium">
-      Give me your orders....<br> start a new project....
-    </p>
+
   </div>
 </section>
 
@@ -116,6 +114,16 @@
   text-shadow:
     0 0 10px rgba(0, 255, 200, 0.7),
     0 0 20px rgba(0, 255, 200, 0.5);
+}
+
+/* スマホ(幅 640px 以下)では折れずに一行表示 */
+@media (max-width: 640px) {
+  #loopText {
+    white-space: nowrap;
+    overflow-x: auto;
+    font-size: clamp(24px, 8vw, 48px);
+    /* 最小24px、画面幅に応じて最大48pxまで */
+  }
 }
 </style>
 
