@@ -1,0 +1,131 @@
+---
+
+---
+<section class="py-16 bg-black text-white">
+  <div class="max-w-5xl mx-auto px-4">
+
+    <h2 class="text-center text-3xl font-bold mb-12 tracking-wide">
+      SOCIAL LINKS
+    </h2>
+
+    <!-- レスポンシブグリッド -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- SNS BLOCK TEMPLATE -->
+      <!-- 1つ目：X -->
+      <div class="space-y-4 text-center p-6 bg-white/10 backdrop-blur-xl rounded-2xl shadow-xl border border-white/10 hover:bg-white/20 transition duration-500">
+        
+        <!-- Button -->
+        <a
+          href="https://x.com/shi_ge_yu"
+          target="_blank"
+          class="inline-block w-full px-6 py-3 bg-white text-black text-lg font-semibold rounded-full 
+                 shadow hover:bg-gray-300 transition duration-300"
+        >
+          X（Twitter）
+        </a>
+
+        <!-- QR表示ボタン -->
+        <button
+          onclick="document.getElementById('qr-x').classList.toggle('hidden')"
+          class="text-sm text-blue-400 hover:text-blue-300 transition"
+        >
+          QRコードを表示
+        </button>
+
+        <!-- QR -->
+        <div
+          id="qr-x"
+          class="hidden animate-fade-in mt-3"
+        >
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://x.com/shi_ge_yu"
+            class="mx-auto w-40 rounded-lg shadow-lg"
+          >
+        </div>
+
+      </div>
+
+      <!-- 2つ目：Instagram -->
+      <div class="space-y-4 text-center p-6 bg-white/10 backdrop-blur-xl rounded-2xl shadow-xl border border-white/10 hover:bg-white/20 transition duration-500">
+        
+        <a
+          href="https://www.instagram.com/shi.ge_yu/"
+          target="_blank"
+          class="inline-block w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-400 text-white text-lg font-semibold rounded-full 
+                 shadow hover:opacity-80 transition duration-300"
+        >
+          Instagram
+        </a>
+
+        <button
+          onclick="document.getElementById('qr-ig').classList.toggle('hidden')"
+          class="text-sm text-blue-400 hover:text-blue-300 transition"
+        >
+          QRコードを表示
+        </button>
+
+        <div
+          id="qr-ig"
+          class="hidden animate-fade-in mt-3"
+        >
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.instagram.com/shi.ge_yu/"
+            class="mx-auto w-40 rounded-lg shadow-lg"
+          >
+        </div>
+
+      </div>
+
+      <!-- 3つ目：Threads -->
+      <div class="space-y-4 text-center p-6 bg-white/10 backdrop-blur-xl rounded-2xl shadow-xl border border-white/10 hover:bg-white/20 transition duration-500">
+        
+        <a
+          href="https://www.threads.com/@shi.ge_yu"
+          target="_blank"
+          class="inline-block w-full px-6 py-3 bg-indigo-600 text-white text-lg font-semibold rounded-full 
+                 shadow hover:bg-indigo-500 transition duration-300"
+        >
+          Threads
+        </a>
+
+        <button
+          onclick="document.getElementById('qr-th').classList.toggle('hidden')"
+          class="text-sm text-blue-400 hover:text-blue-300 transition"
+        >
+          QRコードを表示
+        </button>
+
+        <div
+          id="qr-th"
+          class="hidden animate-fade-in mt-3"
+        >
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.threads.com/@shi.ge_yu"
+            class="mx-auto w-40 rounded-lg shadow-lg"
+          >
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- fade-in animation -->
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+    transform-origin: top;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>

@@ -1,3 +1,7 @@
+---
+import Sns from "../components/Sns.astro";
+---
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -65,45 +69,95 @@
   </section>
 
   <section class="py-20 bg-black text-white">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-semibold mb-12">サービス紹介</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="p-6 border border-gray-700 rounded-2xl">
-          <h3 class="text-2xl font-bold mb-2">📸 インフィニティーショット</h3>
-          <p class="text-gray-400">時間が許す限り、写真撮影いたします。全ての写真をアーカイブします。</p>
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <h2 class="text-4xl font-semibold mb-14 tracking-wide">サービス紹介</h2>
+
+      <!-- カードのグリッド -->
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- カード1 -->
+        <div
+          class="group p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg 
+                hover:shadow-2xl hover:-translate-y-2 hover:bg-white/10 transition-all duration-500"
+        >
+          <h3 class="text-2xl font-bold mb-3 flex items-center justify-center gap-2">
+            📸 インフィニティーショット
+          </h3>
+          <p class="text-gray-300 leading-relaxed">
+            時間が許す限り、写真撮影いたします。  
+            撮影した全ての写真をアーカイブします。
+          </p>
         </div>
-        <div class="p-6 border border-gray-700 rounded-2xl">
-          <h3 class="text-2xl font-bold mb-2">💾 インフィニティーアーカイブ</h3>
-          <p class="text-gray-400">撮影した全ての写真を１ヶ月間、専用ページからダウンロード可能です。</p>
+
+        <!-- カード2 -->
+        <div
+          class="group p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg 
+                hover:shadow-2xl hover:-translate-y-2 hover:bg-white/10 transition-all duration-500"
+        >
+          <h3 class="text-2xl font-bold mb-3 flex items-center justify-center gap-2">
+            💾 インフィニティーアーカイブ
+          </h3>
+          <p class="text-gray-300 leading-relaxed">
+            撮影した全ての写真を１ヶ月間、  
+            専用ページからダウンロード可能です。
+          </p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="py-20 bg-neutral-900 text-gray-200">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-12">料金プラン</h2>
 
-      <div class="bg-neutral-800 rounded-3xl shadow-xl p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h3 class="text-2xl font-semibold mb-4">1時間プラン</h3>
-          <p class="text-3xl font-bold mb-0 text-indigo-400">2,000円 / 30分</p>
-          <p class="text-sm text-red-400 mb-4">※ 別途、交通費・スタジオ代を実費ご負担いただきます</p>
-          <ul class="text-gray-400 mb-4 space-y-2 list-disc list-inside">
-            <li>インフィニティーショット（撮影し放題）</li>
-            <li>インフィニティーアーカイブ（全データ1ヶ月DL可能）</li>
-          </ul>
-        </div>
+<!-- サービス紹介セクション -->
+<section class="py-24 bg-neutral-900 text-gray-200">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-5xl font-extrabold mb-16">サービス紹介</h2>
 
-        <div class="flex flex-col items-center justify-center">
-          <a href="https://systemadmin.co.jp/download" target="_blank"
-            class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-4 px-10 rounded-full shadow-lg transition-transform transform hover:scale-105">
-            写真をダウンロード
-          </a>
-        </div>
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- インフィニティプラン -->
+      <div class="bg-neutral-800 rounded-3xl shadow-2xl p-8 hover:scale-105 transform transition-all duration-300">
+        <h3 class="text-2xl font-semibold mb-4">インフィニティプラン</h3>
+        <p class="text-3xl font-bold mb-2 text-indigo-400">5,000円 / 30分</p>
+        <p class="text-sm text-red-400 mb-6">※ 別途、交通費・スタジオ代を実費ご負担いただきます</p>
+        <ul class="text-gray-400 space-y-3 list-disc list-inside text-left">
+          <li>インフィニティーショット（撮影し放題）</li>
+          <li>インフィニティーアーカイブ（全データ1ヶ月DL可能）</li>
+        </ul>
+      </div>
+
+      <!-- ワンショットプラン -->
+      <div class="bg-neutral-800 rounded-3xl shadow-2xl p-8 hover:scale-105 transform transition-all duration-300">
+        <h3 class="text-2xl font-semibold mb-4">ワンショットプラン</h3>
+        <p class="text-3xl font-bold mb-2 text-indigo-400">1,000円 / 1枚</p>
+        <p class="text-sm text-red-400 mb-6">※ 別途、交通費・スタジオ代を実費ご負担いただきます</p>
+        <ul class="text-gray-400 space-y-3 list-disc list-inside text-left">
+          <li>即時データ取得</li>
+          <li>X または Instagram でその場でお渡し可能</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- 専用ダウンロードページセクション -->
+<section class="py-24 bg-neutral-800 text-gray-200">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-5xl font-extrabold mb-8">専用ダウンロードページ</h2>
+    <h3 class="text-2xl font-semibold mb-4">※サンプルページです</h3>  
+    <p class="text-lg mb-12 text-gray-400">
+      事前にURLをお伝えいたします。
+    </p>
+    <a href="https://systemadmin.co.jp/download" target="_blank"
+       class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-4 px-12 rounded-full shadow-xl transition-transform transform hover:scale-110">
+      写真をダウンロード
+    </a>
+  </div>
+</section>
+
+  <Sns />
+
 
 </body>
 </html>
+
