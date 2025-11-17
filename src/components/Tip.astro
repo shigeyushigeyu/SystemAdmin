@@ -1,0 +1,59 @@
+---
+
+---
+<section class="text-center mt-12">
+  <h2 class="text-3xl font-bold mb-4">SEND TIP</h2>
+  <p class="text-gray-600 mb-6">
+    If you enjoy my photography, you can support my work here.
+  </p>
+
+  <div class="space-y-4 inline-block bg-white/10 backdrop-blur-xl rounded-2xl shadow-xl border border-white/10 p-6">
+    
+    <!-- Stripe 支援ボタン -->
+    <a
+      href="https://buy.stripe.com/test_8x27sM6Ne6p82FS3PGf7i00"
+      target="_blank"
+      class="inline-block w-full px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white text-lg font-semibold rounded-full shadow-lg transition duration-300"
+    >
+      Support Studio Shigeyu
+    </a>
+
+    <!-- QR表示ボタン -->
+    <button
+      onclick="document.getElementById('qr-stripe').classList.toggle('hidden')"
+      class="text-sm text-blue-400 hover:text-blue-300 transition mt-2"
+    >
+      QRコードを表示
+    </button>
+
+    <!-- QR表示領域 -->
+    <div id="qr-stripe" class="hidden animate-fade-in mt-3">
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://buy.stripe.com/test_8x27sM6Ne6p82FS3PGf7i00"
+        class="mx-auto w-40 rounded-lg shadow-lg"
+        alt="Stripe QRコード"
+      >
+    </div>
+  </div>
+</section>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+    transform-origin: top;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>
+
+
+
+
