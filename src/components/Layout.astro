@@ -1,0 +1,79 @@
+---
+// src/components/Layout.astro
+import '../styles/global.css';
+export interface Props {
+  title: string;
+  description: string;
+  organizationName: string;
+  pageUrl: string;
+  logo: string;
+  sameAs: string;
+  twitterSite: string; //@systemadmi_n
+  pageImage: string; //https://systemadmin.co.jp/systemadmin.png
+  pageImage16: string;
+  pageImage32: string;
+  pageImage96: string;
+  pageImage512: string;
+  appleImage: string;
+}
+const { title, 
+  description, 
+  organizationName, 
+  pageUrl, 
+  logo, 
+  sameAs,
+  twitterSite,
+  pageImage,
+  pageImage16,
+  pageImage32,
+  pageImage96,
+  pageImage512,
+  appleImage } = Astro.props; 
+// JSON.stringifyに渡すためのデータオブジェクトを定義
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": organizationName,
+  "url": pageUrl,
+  "logo": logo,
+  "sameAs": [
+    sameAs
+  ]
+};
+
+---
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="/_astro/tailwind.css" /> 
+    <meta name="robots" content="index, follow">
+    <meta name="twitter:card" content="summary_large_image"> 
+    <meta name="twitter:site" content={twitterSite}>
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={pageImage}>
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content={pageImage}>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content={title}>
+    <meta property="og:url" content={pageUrl}> 
+    <link rel="canonical" href={pageUrl}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href={pageImage16} sizes="16x16" type="image/png">
+    <link rel="icon" href={pageImage32} sizes="32x32" type="image/png">
+    <link rel="icon" href={pageImage96} sizes="96x96" type="image/png">
+    <link rel="icon" href={pageImage512} sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" href={appleImage}>
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  </head>
+  <body class="font-sans text-gray-800 bg-gray-50">
+    <slot />
+  </body>
+</html>

@@ -1,21 +1,40 @@
 ---
 import Sns from "../components/Sns.astro";
-import Tip from "../components/Tip.astro"
+import Tip from "../components/Tip.astro";
+import Paypay from "../components/Paypay.astro"
 ---
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>スタジオしげゆ - 写真撮影サービス</title>
   <meta name="description" content="無限に撮る、無限に届ける。スタジオしげゆの写真撮影サービス。イベント・ポートレート・アート写真まで対応。" />
+  <link rel="stylesheet" href="/_astro/tailwind.css" /> 
+  <meta name="robots" content="index, follow">
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:site" content="@shi_ge_yu">
+  <meta name="twitter:title" content="しげゆ">
+  <meta name="twitter:description" content="無限に撮る、無限に届ける。スタジオしげゆの写真撮影サービス。イベント・ポートレート・アート写真まで対応。">
+  <meta name="twitter:image" content="https://systemadmin.co.jp/studioshigeyu.jpg">
   <meta property="og:title" content="スタジオしげゆ - 写真撮影サービス" />
   <meta property="og:description" content="無限に撮る、無限に届ける。スタジオしげゆの写真撮影サービス。イベント・ポートレート・アート写真まで対応。" />
+  <meta property="og:image" content="https://systemadmin.co.jp/studioshigeyu.jpg" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="スタジオしげゆ - 写真撮影サービス">
   <meta property="og:url" content="https://systemadmin.co.jp/studioshigeyu" />
-  <meta property="og:image" content="https://systemadmin.co.jp/images/studioshigeyu.jpg" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://systemadmin.co.jp/studioshigeyu">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/_astro/tailwind.css" />
+  <link rel="icon" href="/favicon-16x16-ss.jpg" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon-32x32-ss.jpg" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-96x96-ss.jpg" sizes="96x96" type="image/png">
+  <link rel="icon" href="/favicon-512x512-ss.jpg" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="https://systemadmin.co.jp/studioshigeyu.jpg">
+
 
   <script type="application/ld+json">
     {
@@ -160,5 +179,9 @@ import Tip from "../components/Tip.astro"
 </section>
   <Sns />
   <Tip />
+  <Paypay />
+  <footer class="mt-16 py-6 bg-gray-800 text-gray-300 text-center text-sm">
+    &copy; 2025 STUDIO SHIGEYU
+  </footer>
 </body>
 </html>

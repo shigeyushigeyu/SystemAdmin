@@ -1,0 +1,93 @@
+---
+// src/components/welife/InstructorsSection.astro
+---
+<section class="py-24 md:py-36 bg-gray-950 text-white">
+  <div class="container mx-auto px-4 max-w-6xl">
+
+    <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 neon-title-green">
+      あなたの「創造」を導く<br>プロフェッショナル
+    </h2>
+    <p class="text-center text-xl md:text-2xl mb-16 text-gray-400">
+      現役のWebエンジニアとデザイナーが、あなたの目標達成を強力にサポートします。
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+      <div class="instructor-card p-6 bg-gray-800 rounded-xl border-2 border-green-500/50 shadow-lg transition-transform duration-300 hover:shadow-green-glow">
+        <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg mb-6 border border-gray-700">
+          <img src="/images/welife/teacher01.png" alt="講師1" class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-500" />
+        </div>
+        <h3 class="text-3xl font-bold mb-2 text-green-300">土井</h3>
+        <p class="text-lg text-gray-400 mb-4">Webシステム開発 / UI/UXデザイン</p>
+        <p class="text-gray-300 text-base">
+          大手IT企業でWebサービス開発に10年以上従事。ユーザー体験を重視した、機能的かつ美しいシステム構築が得意です。AIコーディングも積極的に活用し、開発効率を最大化します。
+        </p>
+        <a href="#" class="mt-4 inline-block text-green-400 hover:text-green-300 transition-colors duration-300">プロフィール詳細 &rarr;</a>
+      </div>
+
+      <div class="instructor-card p-6 bg-gray-800 rounded-xl border-2 border-blue-500/50 shadow-lg transition-transform duration-300 hover:shadow-blue-glow">
+        <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg mb-6 border border-gray-700">
+          <img src="/images/welife/teacher02.png" alt="講師2" class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-500" />
+        </div>
+        <h3 class="text-3xl font-bold mb-2 text-blue-300">川田</h3>
+        <p class="text-lg text-gray-400 mb-4">フロントエンド開発 / Webデザイン / SEO</p>
+        <p class="text-gray-300 text-base">
+          デザイン事務所で数々のWebサイト制作を担当。見た目の美しさだけでなく、SEOに強く、集客力のあるサイト設計を得意としています。あなたのアイデアを形にするお手伝いをします。
+        </p>
+        <a href="#" class="mt-4 inline-block text-blue-400 hover:text-blue-300 transition-colors duration-300">プロフィール詳細 &rarr;</a>
+      </div>
+
+      <div class="instructor-card p-6 bg-gray-800 rounded-xl border-2 border-purple-500/50 shadow-lg transition-transform duration-300 hover:shadow-purple-glow">
+        <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg mb-6 border border-gray-700">
+          <img src="/images/welife/teacher03.png" alt="講師3" class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-500" />
+        </div>
+        <h3 class="text-3xl font-bold mb-2 text-purple-300">田中</h3>
+        <p class="text-lg text-gray-400 mb-4">バックエンド開発 / データベース / クラウド</p>
+        <p class="text-gray-300 text-base">
+          FinTech系のスタートアップで大規模システム開発に従事。複雑なバックエンドロジックやデータベース設計、クラウドインフラ構築を基礎から丁寧に指導します。
+        </p>
+        <a href="#" class="mt-4 inline-block text-purple-400 hover:text-purple-300 transition-colors duration-300">プロフィール詳細 &rarr;</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Tailwindのaspect-ratioプラグインを使用 */
+  /* npm install -D @tailwindcss/aspect-ratio */
+  /* tailwind.config.mjs の plugins に require('@tailwindcss/aspect-ratio') を追加 */
+  .aspect-w-4 { --aspect-w: 4; }
+  .aspect-h-3 { --aspect-h: 3; }
+  .aspect-w-4\/aspect-h-3 {
+    position: relative;
+    padding-bottom: calc(var(--aspect-h) / var(--aspect-w) * 100%);
+  }
+  .aspect-w-4\/aspect-h-3 > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .neon-title-green {
+    color: #00ffc8;
+    text-shadow: 0 0 10px rgba(0, 255, 200, 0.5);
+  }
+
+  /* カードのホバーグローエフェクト */
+  .hover\:shadow-green-glow:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 200, 0.7);
+    border-color: #00ffc8;
+  }
+  .hover\:shadow-blue-glow:hover {
+    box-shadow: 0 0 25px rgba(0, 150, 255, 0.7);
+    border-color: #0096ff;
+  }
+  .hover\:shadow-purple-glow:hover {
+    box-shadow: 0 0 25px rgba(150, 0, 255, 0.7);
+    border-color: #9600ff;
+  }
+</style>

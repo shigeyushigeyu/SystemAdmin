@@ -1,0 +1,120 @@
+---
+// src/components/welife/CurriculumSection.astro
+---
+<section class="py-20 md:py-32 bg-gray-950 text-white">
+  <div class="container mx-auto px-4 max-w-6xl">
+
+    <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-16 neon-title-cyan">
+      ゼロから「あなたのシステム」を公開するまでのロードマップ
+    </h2>
+
+    <p class="text-center text-xl md:text-2xl mb-20 max-w-4xl mx-auto text-gray-400">
+      企画から公開、そして収益化の道筋まで。現役エンジニアのノウハウを凝縮し、**Web開発の全工程をあなたの手で完結**させる、実践的なスキルを習得します。
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="curriculum-card bg-gray-800 p-6 rounded-lg border-t-4 border-cyan-400 shadow-xl transition-all duration-300 hover:shadow-cyan-glow">
+        <h3 class="text-2xl font-bold mb-4 text-cyan-300">システム構築＆運用</h3>
+        <ul class="space-y-4 text-gray-300">
+          <li class="flex items-start">
+            <span class="text-cyan-400 mr-2 mt-0.5 text-xl">🚀</span>
+            **Webシステムを設計から公開まで完全サポート**
+          </li>
+          <li class="flex items-start">
+            <span class="text-cyan-400 mr-2 mt-0.5 text-xl">⚡</span>
+            **最新モダンフレームワークAstroを使用**
+          </li>
+          <li class="flex items-start">
+            <span class="text-cyan-400 mr-2 mt-0.5 text-xl">📦</span>
+            **GitHubを用いたデプロイシステム**の構築
+          </li>
+          <li class="flex items-start">
+            <span class="text-cyan-400 mr-2 mt-0.5 text-xl">🌐</span>
+            **ドメイン取得からDNS設定**までを実務レベルで習得
+          </li>
+        </ul>
+      </div>
+
+      <div class="curriculum-card bg-gray-800 p-6 rounded-lg border-t-4 border-purple-400 shadow-xl transition-all duration-300 hover:shadow-purple-glow">
+        <h3 class="text-2xl font-bold mb-4 text-purple-300">ビジネス統合＆集客</h3>
+        <ul class="space-y-4 text-gray-300">
+          <li class="flex items-start">
+            <span class="text-purple-400 mr-2 mt-0.5 text-xl">💰</span>
+            **Stripeを使用した決済システムの実装**
+          </li>
+          <li class="flex items-start">
+            <span class="text-purple-400 mr-2 mt-0.5 text-xl">🛒</span>
+            **小規模ECサイトの作成**と管理機能の実装
+          </li>
+          <li class="flex items-start">
+            <span class="text-purple-400 mr-2 mt-0.5 text-xl">📈</span>
+            **SEO対策（「○○で検索」を実現）**の基礎知識
+          </li>
+          <li class="flex items-start">
+            <span class="text-purple-400 mr-2 mt-0.5 text-xl">📊</span>
+            アクセス解析ツールを活用した効果測定
+          </li>
+        </ul>
+      </div>
+
+      <div class="curriculum-card bg-gray-800 p-6 rounded-lg border-t-4 border-pink-400 shadow-xl transition-all duration-300 hover:shadow-pink-glow">
+        <h3 class="text-2xl font-bold mb-4 text-pink-300">コア技術＆アート表現</h3>
+        <ul class="space-y-4 text-gray-300">
+          <li class="flex items-start">
+            <span class="text-pink-400 mr-2 mt-0.5 text-xl">📘</span>
+            **HTML, CSS, JavaScript** の基礎知識と応用力
+          </li>
+          <li class="flex items-start">
+            <span class="text-pink-400 mr-2 mt-0.5 text-xl">📱</span>
+            **レスポンシブWebデザイン**による全デバイス対応
+          </li>
+          <li class="flex items-start">
+            <span class="text-pink-400 mr-2 mt-0.5 text-xl">🎨</span>
+            デザインツールとTailwind CSSを使った**高速デザイン実装**
+          </li>
+          <li class="flex items-start">
+            <span class="text-pink-400 mr-2 mt-0.5 text-xl">💡</span>
+            プロジェクトを円滑に進めるための**開発プロセス理解**
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    
+    <div class="text-center mt-20">
+      <h3 class="text-3xl font-bold mb-6 text-gray-200">まずは、あなたのアイデアを聞かせてください。</h3>
+      <a href="/trial-lesson" class="px-10 py-4 bg-gradient-to-r from-green-400 to-teal-500 text-white text-2xl font-bold rounded-full shadow-lg hover:from-green-500 hover:to-teal-600 transition-all duration-300 transform hover:scale-105 neon-cta-glow">
+        無料体験レッスンに申し込む
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .neon-title-cyan {
+    color: #00eaff;
+    text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+  }
+  
+  /* カードのホバーグローエフェクト */
+  .hover\:shadow-cyan-glow:hover {
+    box-shadow: 0 0 25px rgba(0, 234, 255, 0.7);
+    border-color: #00eaff;
+  }
+  .hover\:shadow-purple-glow:hover {
+    box-shadow: 0 0 25px rgba(160, 0, 255, 0.7);
+    border-color: #a000ff;
+  }
+  .hover\:shadow-pink-glow:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 160, 0.7);
+    border-color: #ff00a0;
+  }
+  
+  /* CTAボタンのグロー */
+  .neon-cta-glow {
+    box-shadow: 0 0 15px rgba(50, 255, 150, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+</style>

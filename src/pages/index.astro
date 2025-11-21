@@ -1,56 +1,28 @@
 ---
-//src/pages/index.astro
-import "../styles/global.css";
-import "../styles/global.css";
+// src/pages/index.astro
+import Layout from "../components/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Main from "../components/Main.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>システムアドミン株式会社 | ITの総合芸術</title>
-    <meta name="description" content="ITの総合芸術を提供する、システムアドミン株式会社へようこそ。すべてのユーザーが「システムの管理者となる」ための、開発・運用・セキュリティのトータルソリューションをご提供します。" />
-    <meta name="robots" content="index, follow">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@systemadmi_n">
-    <meta name="twitter:title" content="システムアドミン">
-    <meta name="twitter:description" content="ITの総合芸術を提供する、システムアドミン株式会社へようこそ。すべてのユーザーが「システムの管理者となる」ための、開発・運用・セキュリティのトータルソリューションをご提供します。">
-    <meta name="twitter:image" content="https://systemadmin.co.jp/systemadmin.png">
-    <meta property="og:title" content="システムアドミン株式会社 | ITの総合芸術">
-    <meta property="og:description" content="ITの総合芸術を提供する、システムアドミン株式会社へようこそ。すべてのユーザーが「システムの管理者となる」ための、開発・運用・セキュリティのトータルソリューションをご提供します。">
-    <meta property="og:image" content="https://systemadmin.co.jp/systemadmin.png">
-    <meta property="og:url" content="https://systemadmin.co.jp/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="システムアドミン株式会社 | ITの総合芸術">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png">
-    <link rel="icon" href="/favicon-512x512.png" sizes="512x512" type="image/png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="canonical" href="https://systemadmin.co.jp/">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "システムアドミン株式会社",
-      "url": "https://systemadmin.co.jp/",
-      "logo": "https://systemadmin.co.jp/systemadmin.png",
-      "sameAs": [
-        "https://twitter.com/systemadmi_n"
-      ]
-    }
-      </head>
-    </script>
-  <body class="font-sans text-gray-800 bg-gray-50">
+<Layout
+  title="システムアドミン株式会社 | ITの総合芸術"
+  description="ITの総合芸術を提供する、システムアドミン株式会社へようこそ。すべてのユーザーが「システムの管理者となる」ための、開発・運用・セキュリティのトータルソリューションをご提供します。"
+  organizationName="システムアドミン株式会社"
+  pageUrl="https://systemadmin.co.jp/"
+  logo="https://systemadmin.co.jp/systemadmin.png"
+  sameAs="https://twitter.com/systemadmi_n"
+  twitterSite="@systemadmi_n"
+  pageImage="https://systemadmin.co.jp/systemadmin.png"
+  pageImage16="/favicon-16x16.png"
+  pageImage32="/favicon-32x32.png"
+  pageImage96="/favicon-96x96.png"
+  pageImage512="/favicon-512x512.png"
+  appleImage="/apple-touch-icon.png"
+>
   　<Header />
     <Hero />
     <Main />
     <Footer />
-  </body>
-</html>
+</Layout>

@@ -1,0 +1,81 @@
+---
+// src/components/welife/PricingSection.astro
+---
+<section class="py-24 md:py-36 bg-gray-900 text-white">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 neon-title-pink">
+      クリアな料金体系
+    </h2>
+    <p class="text-center text-xl md:text-2xl mb-16 text-gray-400">
+      すべて完全個別指導。あなたのペースに合わせた柔軟なコースをご用意しています。
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div class="pricing-card p-8 rounded-xl border-2 border-gray-700 bg-gray-800 transition-transform duration-300 hover:border-pink-500">
+        <h3 class="text-2xl font-bold mb-4 text-gray-300">単発スポット指導</h3>
+        <p class="text-gray-400 mb-6">緊急の質問や、単発での技術指導に最適です。</p>
+        <div class="text-5xl font-extrabold text-pink-400 mb-2">5,000<span class="text-2xl ml-1">円</span></div>
+        <p class="text-lg text-gray-500 mb-8">(税込 5,500円 / 45分)</p>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-center"><span class="text-pink-400 mr-2">✓</span> 完全個別指導</li>
+          <li class="flex items-center"><span class="text-pink-400 mr-2">✓</span> 都度予約制</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card p-8 rounded-xl border-4 border-cyan-500 bg-gray-700 shadow-2xl transition-transform duration-300 transform scale-105 neon-shadow-cyan">
+        <span class="absolute top-0 right-0 bg-cyan-500 text-black px-4 py-1 text-sm font-bold rounded-tr-lg rounded-bl-lg">✨ 人気 No.1</span>
+        <h3 class="text-2xl font-bold mb-4 text-cyan-300">4回 パックコース</h3>
+        <p class="text-gray-200 mb-6">継続的な学習習慣と、目標達成を目指す方に最もおすすめのコースです。</p>
+        <div class="text-6xl font-extrabold text-cyan-400 mb-2">18,000<span class="text-3xl ml-1">円</span></div>
+        <p class="text-lg text-gray-300 mb-8">(税込 19,800円 / 1回あたり <span class="font-bold text-yellow-300">4,500円</span>)</p>
+        <ul class="space-y-3 text-gray-100 font-medium">
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">✓</span> **10% OFF** 適用</li>
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">✓</span> 定期的な進捗管理</li>
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">✓</span> 優先予約権</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card p-8 rounded-xl border-2 border-gray-700 bg-gray-800 transition-transform duration-300 hover:border-purple-500">
+        <h3 class="text-2xl font-bold mb-4 text-gray-300">10回 パックコース</h3>
+        <p class="text-gray-400 mb-6">大規模なプロジェクトや、本格的なスキルセット習得を目指す方に。</p>
+        <div class="text-5xl font-extrabold text-purple-400 mb-2">45,000<span class="text-2xl ml-1">円</span></div>
+        <p class="text-lg text-gray-500 mb-8">(税込 49,500円 / 1回あたり <span class="font-bold">4,500円</span>)</p>
+        <ul class="space-y-3 text-gray-300">
+          <li class="flex items-center"><span class="text-purple-400 mr-2">✓</span> 割引率 10% OFF</li>
+          <li class="flex items-center"><span class="text-purple-400 mr-2">✓</span> 長期間の技術サポート</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="mt-20 p-6 bg-gray-800/80 rounded-lg border border-gray-700 max-w-4xl mx-auto">
+      <h4 class="text-xl font-bold mb-3 text-yellow-400">費用に関する注意事項</h4>
+      <ul class="space-y-2 text-gray-400 text-base">
+        <li><span class="text-yellow-400 mr-2">●</span> **交通費について:** 講師が訪問する際の交通費は、別途**実費**をいただきます。</li>
+        <li><span class="text-yellow-400 mr-2">●</span> **教材費:** 当教室ではフリーソフトを使用するため、**教材費は一切かかりません。**</li>
+        <li><span class="text-yellow-400 mr-2">●</span> **その他:** 学習用のPC、およびインターネット環境はご自身でご用意ください。</li>
+      </ul>
+    </div>
+
+    <div class="text-center mt-20">
+      <a href="/trial-lesson" class="px-10 py-4 bg-gradient-to-r from-teal-500 to-green-500 text-white text-2xl font-bold rounded-full shadow-lg hover:from-teal-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105 neon-cta-glow">
+        無料体験レッスンに申し込む
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .neon-title-pink {
+    color: #ff00a0;
+    text-shadow: 0 0 10px rgba(255, 0, 160, 0.5);
+  }
+  .neon-shadow-cyan {
+    box-shadow: 0 0 30px rgba(0, 234, 255, 0.7);
+  }
+  .neon-cta-glow {
+    box-shadow: 0 0 15px rgba(50, 255, 150, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+</style>

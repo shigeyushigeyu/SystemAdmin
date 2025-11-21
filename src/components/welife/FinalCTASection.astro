@@ -1,0 +1,60 @@
+---
+// src/components/welife/FinalCTASection.astro
+---
+<section class="relative py-24 md:py-32 bg-black border-t-2 border-b-2 border-blue-600/50 shadow-inner-dark overflow-hidden">
+  
+    <div 
+    class="absolute inset-0 z-0 opacity-30"
+    style={{
+        backgroundImage: "url('/images/welife/grid-pattern.png')",
+        backgroundSize: 'cover',      // ← セクションに全面表示
+        backgroundRepeat: 'no-repeat',// ← タイル状にしない（1枚のみ）
+        backgroundPosition: 'center', // ← 中央配置
+        backgroundAttachment: 'local',
+    }}
+    >
+    </div>
+  <div class="container relative z-10 mx-auto px-4 max-w-4xl text-center">
+
+    <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 text-white neon-glow-purple">
+      さあ、あなたの**創造性**を現実に。
+    </h2>
+
+    <p class="text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed">
+      システム構築のロジックと、アート表現の自由。この二つの力を手に入れ、<br class="hidden sm:inline">
+      あなただけの未来を設計しましょう。
+    </p>
+    
+    <a href="/trial-lesson" class="inline-block">
+      <button class="px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-2xl font-black rounded-full shadow-2xl transition-all duration-300 
+                     transform hover:scale-105 neon-final-button-glow uppercase tracking-wider">
+        無料体験レッスンに申し込む
+      </button>
+    </a>
+
+  </div>
+</section>
+
+<style>
+  /* 影とネオングローの調整 */
+  .shadow-inner-dark {
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* 内側に暗い影 */
+  }
+
+  .neon-glow-purple {
+    color: #e0b3ff; /* 薄いパープル */
+    text-shadow:
+      0 0 10px rgba(224, 179, 255, 0.8),
+      0 0 30px rgba(200, 150, 255, 0.6);
+  }
+
+  /* 強力な最終ボタンのグロー */
+  .neon-final-button-glow {
+    /* 初期状態のグロー */
+    box-shadow: 0 0 25px rgba(0, 255, 200, 0.7), 0 0 40px rgba(150, 0, 255, 0.7);
+  }
+  .neon-final-button-glow:hover {
+    /* ホバー時のグロー強化 */
+    box-shadow: 0 0 35px rgba(0, 255, 200, 1), 0 0 50px rgba(150, 0, 255, 1);
+  }
+</style>

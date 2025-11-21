@@ -1,0 +1,36 @@
+---
+//src/pages/welife.astro
+import Layout from "../components/Layout.astro";
+import HeroSection from "../components/welife/HeroSection.astro";
+import AboutwSection from "../components/welife/AboutSection.astro";
+import CurriculumSection from "../components/welife/CurriculumSection.astro";
+import PricingSection from "../components/welife/PricingSection.astro";
+import InstructorsSection from "../components/welife/InstructorsSection.astro";
+import FAQSection from "../components/welife/FAQSection.astro";
+import FinalCTASection from "../components/welife/FinalCTASection.astro";
+import Footer from "../components/welife/Footerwelife.astro";
+---
+<Layout
+  title="weLife | web開発プログラミング教室"
+  description="パソコン教室weLife web開発を通じて、システムとアートの両面から学ぶ力を育てます。本格的なホームページを作成しよう！"
+  organizationName="パソコン教室weLife"
+  pageUrl="https://systemadmin.co.jp/welife"
+  logo="https://systemadmin.co.jp/welife.png"
+  sameAs="https://twitter.com/shi_ge_yu"
+  twitterSite="@shi_ge_yu"
+  pageImage="https://systemadmin.co.jp/welife.png"
+  pageImage16="/favicon-16x16-wl.png"
+  pageImage32="/favicon-32x32-wl.png"
+  pageImage96="/favicon-96x96-wl.png"
+  pageImage512="/favicon-512x512-wl.png"
+  appleImage="/welife.png"
+>
+  <HeroSection />
+  <AboutwSection />
+  <CurriculumSection />
+  <PricingSection />
+  <InstructorsSection />
+  <FAQSection />
+  <FinalCTASection />
+  <Footer />
+</Layout>
